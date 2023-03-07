@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Записи
+{% endblock %}
+
+
+{% block content %}
+
+<table id="example" class="display dataTable" >
+	<thead>
+	<tr>
+		<th>Id</th>
+		<th>Name</th>
+		<th>Date</th>
+	</tr>
+	</thead>
+	<tbody>
+	{% for entry in entries %}
+	<tr>
+		<td class="sorting_1">{{ entry.id }}</td>
+		<td>{{ entry.name }}</td>
+		<td class="sorting_2">{{ entry.date|date:"Y-m-d h:i" }}</td>
+	</tr>
+	{% endfor %}
+
+	</tbody>
+</table>
+
+{% endblock %}
+
+{% comment %}
+<div id="example_wrapper" class="dataTables_wrapper">
+	<table class="display dataTable" style="width: 100%;" aria-describedby="example_info">
+		<thead>
+		<tr>
+			<th class="sorting sorting_asc" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+				aria-sort="ascending" aria-label="id: activate to sort column ascending" style="width: 10%;">id
+			</th>
+			<th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+				aria-label="Name: activate to sort column descending" style="width: 70%">Name
+			</th>
+			<th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+				aria-label="Date: activate to sort column ascending" style="width: 20%;">Date
+			</th>
+		</tr>
+
+		</thead>
+		<tbody>
+		{% for entry in entries %}
+		<tr>
+			<td class="sorting_1">{{ entry.id }}</td>
+			<td>{{ entry.name }}</td>
+			<td class="sorting_2">{{ entry.date|date:"Y-m-d h:i" }}</td>
+		</tr>
+		{% endfor %}
+		</tbody>
+		<tfoot>
+		<tr>
+			<th class="sorting sorting_asc" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+				aria-sort="ascending" aria-label="id: activate to sort column ascending" style="width: 10%;">id
+			</th>
+			<th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+				aria-label="Name: activate to sort column descending" style="width: 70%">Name
+			</th>
+			<th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1"
+				aria-label="Date: activate to sort column ascending" style="width: 20%;">Date
+			</th>
+		</tr>
+		</tfoot>
+	</table>
+
+</div>
+<head>
+	<link rel="stylesheet" type="text/css"
+		  href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+</head>
+
+<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" charset="utf8"
+		src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+
+
+
+<div class="dataTables_length" id="example_length">
+	<label>Show
+		<select name="example_length" aria-controls="example" class="">
+			<option value="10">10</option>
+			<option value="25">25</option>
+			<option value="50">50</option>
+			<option value="100">100</option>
+		</select>
+		entries
+	</label>
+</div>
+<div id="example_filter" class="dataTables_filter">
+	<label>Search:
+		<input type="search" class="" placeholder="" aria-controls="example">
+	</label>
+</div>
+
+
+<div class="dataTables_info" id="example_info" role="status" aria-live="polite">
+	Showing 1 to 10 of 57 entries
+</div>
+<div class="dataTables_paginate paging_simple_numbers" id="example_paginate">
+	<a class="paginate_button previous disabled" aria-controls="example" aria-disabled="true" aria-role="link"
+	   data-dt-idx="previous" tabindex="-1" id="example_previous">
+		Previous
+	</a>
+	<span>
+			<a class="paginate_button current" aria-controls="example" aria-role="link" aria-current="page"
+			   data-dt-idx="0" tabindex="0">
+				1
+			</a>
+			<a class="paginate_button " aria-controls="example" aria-role="link" data-dt-idx="1" tabindex="0">
+				2
+			</a>
+			<a class="paginate_button " aria-controls="example" aria-role="link" data-dt-idx="2" tabindex="0">
+				3
+			</a>
+			<a class="paginate_button " aria-controls="example" aria-role="link" data-dt-idx="3" tabindex="0">
+				4
+			</a>
+			<a class="paginate_button " aria-controls="example" aria-role="link" data-dt-idx="4" tabindex="0">
+				5
+			</a>
+			<a class="paginate_button " aria-controls="example" aria-role="link" data-dt-idx="5" tabindex="0">
+				6
+			</a>
+		</span>
+	<a class="paginate_button next" aria-controls="example" aria-role="link" data-dt-idx="next" tabindex="0"
+	   id="example_next">
+		Next
+	</a>
+</div>
+{% endcomment %}
+
+
+
+
+

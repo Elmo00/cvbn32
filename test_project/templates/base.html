@@ -1,0 +1,49 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+{% block head %}
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{% block title %} ^_^ {% endblock %}</title>
+	<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" href="{% static 'DataTables/DataTables/css/jquery.dataTables.css' %}">
+	{% comment %}
+
+	{% endcomment %}
+
+
+</head>
+{% endblock %}
+<body>
+
+{% include 'inc/_nav.html' %}
+
+<div class="container mt-3">
+	<div class="row">
+
+		{% block content %} !!! base templates !!! {% endblock %}
+
+	</div>
+</div>
+
+
+<script src="{% static 'bootstrap/js/bootstrap.bundle.js' %}"></script>
+<script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+<script type="text/javascript" charset="utf8" src="{% static 'js/jquery.min.js' %}"></script>
+<script type="text/javascript" charset="utf8" src="{% static 'js/entries_tables.js' %}"></script>
+<script src="{% static 'DataTables/datatables.min.js' %}"></script>
+
+{% comment %}
+<script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+		integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+		crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"
+		integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+		crossorigin="anonymous"></script>
+{% endcomment %}
+
+</body>
+</html>
