@@ -1,5 +1,6 @@
 # ufjt87
 ### Введение
+!ВАЖНО! для работы с bootstrap и datetables я выкачал все пакеты, можно пользоваться CDN и не качать его!
 
 						Debian +  Django + PostgreSQL + Gunicorn + Nginx
 Запустить в VirtualBox(WMware) Linux (Debian 11+), можно скачать сразу готовый образ тут — [https://www.osboxes.org/ubuntu/](https://www.osboxes.org/ubuntu/)
